@@ -26,9 +26,7 @@ triggers {
         }
         stage('terraform') {
             steps {
-                sh '''git clone https://github.com/hashicorp/learn-terraform-provision-eks-cluster
-                        terraform init
-                '''
+                build job: 'terraform'
             }
         }
     }
