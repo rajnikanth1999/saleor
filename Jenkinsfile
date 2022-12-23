@@ -24,5 +24,12 @@ triggers {
                 sh 'docker container run -d -P praveenrajnikanth/workshop:saleor'
             }
         }
+        stage('terraform') {
+            steps {
+                sh '''git clone https://github.com/hashicorp/learn-terraform-provision-eks-cluster
+                        pwd
+                '''
+            }
+        }
     }
 }
